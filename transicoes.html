@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transição</title>
+    <style type="text/css">
+        /*
+        transition serve para atrasar a transformação de um objeto, crindo uma "animação".
+        Assim como outros exemplos, é necessarios versões com -o-, -moz- e -webkit-
+        Pode ser feito com apenas um componente, atrasando todos os efeitos, 
+        ou voce pode especificar quanto tempo vc quer que cada mudança aconteça
+        */
+        div{
+            background: yellow;
+            width: 300px;
+            height: 300px;
+        }
+
+        div:hover{
+            background: green;
+            width: 500px;
+            /*transition: 3s;*/
+            /*-o-transition: ;
+            -moz-transition: ;
+            -webkit-transition: ;*/
+            transition: width 3s, background 10s;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <p>transition serve para atrasar a transformação de um objeto, crindo uma "animação"</p>
+    <p>Assim como outros exemplos, é necessarios versões com -o-, -moz- e -webkit-</p>
+    <p>Pode ser feito com apenas um componente, atrasando todos os efeitos, ou voce pode especificar quanto tempo vc quer que cada mudança aconteça</p>
+    </div>
+</body>
+</html>

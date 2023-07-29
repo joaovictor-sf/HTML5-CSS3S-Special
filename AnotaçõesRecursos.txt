@@ -1,0 +1,147 @@
+Border Radius
+    Serve para arredondar as bordas de um container, quando mais pixes tiver mais redondo é o container
+        Pode ser usados para fazer um espaço para fotos de perfil
+        Voce pode colocar valores diferentes para cada canto da borda se quiser
+        Navegadores mais antidos não suportam o border-radius, então para funcionar é bom adicionar mais duas versões
+            -webkit- para versões antigas do Chorome e do Safari
+            -moz- para versões antigas do Firefox
+
+Borde Size
+    Quando voce ultiliza o padding, o valor dele é acrescentado ao width e ao height do container.
+    Box-sizing serve para impedir isso.
+
+    Navegadores mais antidos não suportam o border-radius e o Box-sizing, então para funcionar é bom adicionar mais duas versões
+        -webkit- para versões antigas do Chorome e do Safari
+        -moz- para versões antigas do Firefox
+
+Opacidade
+    Deixar algo transparente
+    Para deixar alguma tag transparente é necessairo selecionar uma cor com rgb e 
+            ascrecentar mais um valor, esse valor será a transparencia, quando menor mais transparente.
+            0 - invisivel;
+            1 - completamente visivel;
+    Exemplo:
+        rgb(0, 0, 0, 0.6)
+Degradê
+    Existem diversos tipos de degradê, aqui está alguns deles:
+            radial-gradient: degradê vindo do meio;
+            linear-gradient: degradê vindo dos lados;
+            Para mais informações olhar w3schools
+
+Sombra
+    Para criar uma sombra, ulitliza-se text-shadow(para texto) e box-shadow(para containers).
+    Eles funcionam da seguinte maneita:
+        text-shadow/box-shadow: 
+        horizontal vertical blur(opcional)(fará a sombra fica borrada) cor(é interessante ultilizar rgb para deixar a sombra com certa transparencia);
+
+    No caso do box-shadow, é outra variavel que é possivel colocar, espaçamento, 
+    o quanto a sombra se expalha ou diminui.
+
+Animação
+    Existe um mundo inteiro de maneiras de criar animações com css, é sinceramente incrivel
+    Explicarei apenas o basico:
+        @keyframes sinaliza que voce está iniciando uma animação
+        animation chamará a animação e a edita
+            
+    Assim como o border-radius, é necessario ultilizarar versões diferentes 
+    para funcionar em navegadores especificos: 
+        @-webkit-keyframes
+        @-moz-keyframes
+        @-o-keyframes
+
+    animation tambem precisa dos prefixios:
+        -webkit-animation
+        -moz-animation
+        -o-animation
+    
+    Tipos de animation
+        animation-name: animacao-caixa; Chama a animação
+        animation-duration: 5s; Quanto tempo ela irá durar
+        animation-delay: 3s; Quanto tempo ate ela começar
+        animation-iteration-count: 2; Quantas vezes ela irá se repetir, infinite faz a animaçãos se repedir infinitamente
+        animation-direction: alternate; Decide se a animação teve acontecer em reverso
+    
+    Esses tipos podem ser juntados em um só
+        animation: animacao-caixa 5s 3s infinite alternate;
+
+Transições
+    transition serve para atrasar a transformação de um objeto, crindo uma "animação".
+    Assim como outros exemplos, é necessarios versões com -o-, -moz- e -webkit-
+    Pode ser feito com apenas um componente, atrasando todos os efeitos, 
+    ou voce pode especificar quanto tempo vc quer que cada mudança aconteça
+
+        transition: 3s;
+        ou
+        transition: width 3s, background 10s;
+
+Novas Tags HTML5
+    As novas tags servem para substituir as tags com id.
+    Fazemos isso para leitores de tela conseguirem indentificar qual é o cabeçalho, a navegação, etc...
+        
+        header: Cabeçalho
+        nav: Navegação
+        footer: Rodape
+        article: Artigos ou Postagens
+        section: Uma sessão de algo.
+        time: autoexplicativo
+        aside: Area lateral
+
+Novas tags de input
+    A criação de formularios ganhou uma atualização com o htm5, ela foi os novos tipos de input
+
+    type="email"
+        Ele faz que voce não consiga enviar a não ser que seja algo com @
+        
+    required
+        Colocar isso quer dizer que o espaço tem que ser preenchido
+
+    autofocus
+        Serve para focar um local especifico que eu quero que o usuario preencha primeiro
+        
+    type="number"
+        Torna impossivel de colocar letras e adiciona duas setas que aumentam e diminuem o número
+        É possivel adicionar o valor "min" e o "max" dos números, 
+        alem de poder decidir quantos números são pulados por vez com o "step"
+
+    type="url"
+        Só funciona se começar com https://
+
+    type="search"
+        Adiciona um botão que exclui o que estiver escrito
+
+    type="range"
+        Cria uma barra a qual voce pode deslizar o valor, um slicer
+        Voce pode decidir qual o valor maximo e minimo alem de poder escolher um valor inicial
+        
+    type="date"
+        Uma area feita para receber datas, vem junto com um botão que mostra um calendario
+        
+    type="color"
+        Cria um botão que deixa voce escolher uma cor
+
+FlexBox
+    Quando voce ultiliza a propriedade flexbox, voce passa a ter um contêiner 
+    e dentro dele nós temos Flex items.
+    Para ultilizar flexbox, o conteiner terá a propriedade: display:flex.
+
+    O flexbox vem junto com a propriedade flex e suas especificações.
+
+    flex-direction
+        Permite definir as direções que voce quiser alinhar os elementos.
+        Pode ser de 4 maneiras diferentes: row(default) | row-reverse | colum | colum-reverse
+
+        row: alinhado horizontalmente
+        row-reverse: alinhado horizontalmente a esquerda
+        colum: alinhado verticalmente
+        colum-reverse: alinhado verticalmente de baixo para cima
+
+        Edit.Reverse: a ordem dos itens tambem é alterada.
+
+    flex-wrap
+        Com o flex-wrap, podemos definir quebras de layout.
+        Pode ser de 3 maneiras diferentes: nowrap(default) | wrap | wrap-reverse
+
+        nowrap: o tamanho dos itens é modificado para caber no conteiner.
+        wrap: as posições dos itens se ajustam para conseguir caber no conteiner.
+        wrap-reverse: inverte as posições em que os itens são posicionados, 
+        começando por baixo em vez de começar por cima

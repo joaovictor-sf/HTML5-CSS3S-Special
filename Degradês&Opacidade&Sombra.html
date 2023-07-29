@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /*
+        Transparencia:
+            Para deixar alguma tag transparente é necessairo selecionar uma cor com rgb e 
+            ascrecentar mais um valor, esse valor será a transparencia, quando menor mais transparente.
+            0 - invisivel;
+            1 - completamente visivel;
+
+        Degradê:
+            Existem diversos tipos de degradê, aqui está alguns deles:
+            radial-gradient: degradê vindo do meio;
+            linear-gradient: degradê vindo dos lados;
+            Para mais informações olhar w3schools
+
+        Sombra:
+            Para criar uma sombra, ulitliza-se text-shadow(para texto) e box-shadow(para containers).
+            Eles funcionam da seguinte maneita:
+                text-shadow/box-shadow: 
+                horizontal vertical blur(opcional)(falará a sombra fica borrada) cor(é interessante ultilizar rgb para deixar a sombra com certa transparencia);
+
+            No caso do box-shadow, é outra variavel que é possivel colocar, espaçamento, o quanto a sombra se expalha ou diminui.
+        */
+        #caixa{
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(red, blue, green);
+            padding: 20px;
+            margin: 10px;
+            
+        }
+
+        #caixa2{
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(red, blue);
+            padding: 20px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        #caixa3{
+            width: 300px;
+            height: 300px;
+            background: red;
+            padding: 20px;
+            margin: 10px;
+            color: white;
+            text-shadow: 3px -3px 5px rgb(0, 0, 0, 0.6);
+            box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, 0.6);
+        }
+
+        #caixa2 h3{
+            background: rgb(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa">
+        <h3>Lorem Ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel ullamcorper nulla.</p>
+    </div>
+    <div id="caixa2">
+        <h3>Lorem Ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel ullamcorper nulla.</p>
+    </div>
+    <div id="caixa3">
+        <h3>Sombra</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel ullamcorper nulla.</p>
+    </div>
+</body>
+</html>

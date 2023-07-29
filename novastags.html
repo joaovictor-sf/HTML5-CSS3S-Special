@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novas Tags</title>
+    <style type="text/css">
+        /*
+        As novas tags servem para substituir as tags com id.
+        Fazemos isso para leitores de tela conseguirem indentificar qual é o cabeçalho, a navegação, etc...
+        header: Cabeçalho
+        nav: Navegação
+        footer: Rodape
+        article: Artigos ou Postagens
+        section: Uma sessão de algo.
+        time: autoexplicativo
+        aside: Area lateral
+        */
+        header{
+            border: 1px solid black;
+            height: 200px;
+            margin: 10px;
+        }
+
+        nav{
+            border: 1px solid black;
+            height: 200px;
+            margin: 10px;
+        }
+
+        footer{
+            background: rgb(53, 49, 49);
+            margin: 10px;
+        }
+
+        article{
+            background: orange;
+            padding: 10px;
+            width: 80%;
+            float: right;
+            margin-right: 10px;
+        }
+
+        aside{
+            float: left;
+            background: rgb(66, 110, 116);
+            width: 16.8%;
+            height: 349px;
+            margin-left: 10px;
+        }
+
+        section{
+            border: 1px dotted white;
+        }
+
+        form{
+            clear: both;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /*
+        *   Novas tags de input
+        
+        type="email"
+        Ele faz que voce não consiga enviar a não ser que seja algo com @
+        
+        required
+        Colocar isso quer dizer que o espaço tem que ser preenchido
+
+        autofocus
+        Serve para focar um local especifico que eu quero que o usuario preencha primeiro
+        
+        type="number"
+        Torna impossivel de colocar letras e adiciona duas setas que aumentam e diminuem o número
+        É possivel adicionar o valor "min" e o "max" dos números, 
+        alem de poder decidir quantos números são pulados por vez com o "step"
+
+        type="url"
+        Só funciona se começar com https://
+
+        type="search"
+        Adiciona um botão que exclui o que estiver escrito
+
+        type="range"
+        Cria uma barra a qual voce pode deslizar o valor, um slicer
+        Voce pode decidir qual o valor maximo e minimo alem de poder escolher um valor inicial
+        
+        type="date"
+        Uma area feita para receber datas, vem junto com um botão que mostra um calendario
+        
+        type="color"
+        Cria um botão que deixa voce escolher uma cor
+        */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cabeçalho</h1>
+    </header>
+    <nav>
+
+        <ul>
+            <li>Home</li>
+            <li>Navegação</li>
+        </ul>
+    </nav>
+
+    <article>
+        <h3>Artigos ou Postagens</h3>
+        <h3>Cursos</h3>
+        <section>
+            <h4>Curso de programação</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit posuere nisl ut vestibulum.
+            </p>
+            <span>
+                Atualizado em: <time>19/02/2023</time>
+            </span>
+        </section>
+        <section>
+            <h4>Curso de Design</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit posuere nisl ut vestibulum.
+            </p>
+            <span>
+                Atualizado em: <time>19/02/2023</time>
+            </span>
+        </section>
+    </article>
+    <aside>
+        <h3>Area lateral</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit posuere nisl ut vestibulum.
+        </p>
+    </aside>
+    <!--
+        Novas tags de input
+    -->
+    <form action="">
+        <h3>Novas tags de input</h3>
+        
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" required autofocus>
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+
+        <label for="numero">Número</label>
+        <input type="number" name="numero" id="numero" required min="0" max="10" step="2">
+        <br><br>
+
+        <label for="url">Url</label>
+        <input type="url" name="url" id="url" placeholder="https://www." required>
+        <br><br>
+
+        <label for="pesquisa">Pesquisa</label>
+        <input type="search" name="pesquisa" id="pesquisa">
+        <br><br>
+
+        <label for="range">Range</label>
+        <input type="range" name="range" id="range" min="1" max="5" value="3">
+        <br><br>
+
+        <label for="data">Data</label>
+        <input type="date" name="data" id="data">
+        <br><br>
+
+        <label for="cor">Cor</label>
+        <input type="color" name="cor" id="cor">
+        <br><br>
+
+        <input type="submit" name="" value="Submit">
+    </form>
+
+    <footer>
+        Rodape
+    </footer>
+</body>
+</html>

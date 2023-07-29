@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style type="text/css">
+        #conteudo{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            row(default) | row-reverse | colum | colum-reverse
+            row: alinha os itens na horizontal
+            row-reverse: alinha os itens na horizontal, mas na ordem inversa
+            colum: alinha os itens na vertical
+            colum-reverse: alinha os itens na vertical, mas na ordem inversa
+            */
+
+            flex-direction: row;
+
+            /*
+            nowrap(default) | wrap | wrap-reverse
+            nowrap: não quebra a linha
+            wrap: quebra a linha
+            wrap-reverse: quebra a linha, mas na ordem inversa
+            */
+
+            flex-wrap: nowrap;
+
+            /*
+            flex-start(default) | flex-end | center | space-between | space-around | space-evenly
+            flex-start: alinha os itens no início
+            flex-end: alinha os itens no final
+            center: alinha os itens no centro
+            space-between: alinha os itens com espaçamento entre eles
+            space-around: alinha os itens com espaçamento entre eles e nas extremidades
+            */
+
+            justify-content: flex-start;
+            
+            /*
+            flex-start(default) | flex-end | center | baseline | stretch
+            flex-start: alinha os itens no início
+            flex-end: alinha os itens no final
+            center: alinha os itens no centro
+            baseline: alinha os itens pela base
+            stretch: estica os itens para ocupar todo o espaço
+            */
+
+            align-items: flex-start;
+        }
+
+        .item{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+            background: white;
+            border: 1px solid gray;
+        }
+
+        #conteudo2{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            row(default) | row-reverse | colum | colum-reverse
+            */
+
+            flex-direction: column;
+        }
+
+        #conteudo3{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            row(default) | row-reverse | colum | colum-reverse
+            */
+
+            flex-direction: row-reverse;
+        }
+
+        #conteudo4{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            row(default) | row-reverse | colum | colum-reverse
+            */
+
+            flex-direction: column-reverse;
+        }
+
+        /*
+            Wrap
+        */
+
+        #conteudo5{
+            background: #dcdcdc;
+            height: 400px;
+            width: 300px;
+            display: flex;
+            
+            /*
+            row(default) | row-reverse | colum | colum-reverse
+            */
+
+            flex-direction: row;
+
+            /*
+            nowrap(default) | wrap | wrap-reverse
+            */
+
+            flex-wrap: nowrap;
+        }
+
+        #conteudo6{
+            background: #dcdcdc;
+            height: 400px;
+            width: 300px;
+            display: flex;
+            
+            /*
+            row(default) | row-reverse | colum | colum-reverse
+            */
+
+            flex-direction: row;
+
+            /*
+            nowrap(default) | wrap | wrap-reverse
+            */
+
+            flex-wrap: wrap;
+        }
+
+        #conteudo7{
+            background: #dcdcdc;
+            height: 400px;
+            width: 300px;
+            display: flex;
+            
+            /*
+            row(default) | row-reverse | colum | colum-reverse
+            */
+
+            flex-direction: row;
+
+            /*
+            nowrap(default) | wrap | wrap-reverse
+            */
+
+            flex-wrap: wrap-reverse;
+        }
+
+        /*
+            Justify-content
+        */
+
+        #conteudo8{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            flex-start(default) | flex-end | center | space-between | space-around | space-evenly
+            */
+
+            justify-content: flex-start;
+        }
+
+        #conteudo9{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            flex-start(default) | flex-end | center | space-between | space-around | space-evenly
+            */
+
+            justify-content: flex-end;
+        }
+
+        #conteudo10{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            flex-start(default) | flex-end | center | space-between | space-around | space-evenly
+            */
+
+            justify-content: center;
+        }
+
+        #conteudo11{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            flex-start(default) | flex-end | center | space-between | space-around | space-evenly
+            */
+
+            justify-content: space-between;
+        }
+
+        #conteudo12{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            flex-start(default) | flex-end | center | space-between | space-around | space-evenly
+            */
+
+            justify-content: space-around;
+        }
+
+        #conteudo13{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            flex-start(default) | flex-end | center | space-between | space-around | space-evenly
+            */
+
+            justify-content: space-evenly;
+        }
+
+        /*
+            align-items
+        */
+
+        #conteudo14{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            flex-start(default) | flex-end | center | baseline | stretch
+            */
+
+            align-items: flex-start;
+        }
+
+        #conteudo15{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            flex-start(default) | flex-end | center | baseline | stretch
+            */
+
+            align-items: flex-end;
+        }
+
+        #conteudo16{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            flex-start(default) | flex-end | center | baseline | stretch
+            */
+
+            align-items: center;
+        }
+
+        #conteudo17{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            flex-start(default) | flex-end | center | baseline | stretch
+            */
+
+            align-items: baseline;
+        }
+
+        #conteudo18{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+            
+            /*
+            flex-start(default) | flex-end | center | baseline | stretch
+            */
+
+            align-items: stretch;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>FlexBox</h1>
+
+    <h2>flex-direction</h2>
+    <h3>Row (default)</h3>
+    <div id="conteudo">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>Row-reverse</h3>
+    <div id="conteudo3">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>colum</h3>
+    <div id="conteudo2">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>colum-reverse</h3>
+    <div id="conteudo4">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>flex-wrap</h2>
+
+    <h3>nowrap (default)</h3>
+    <div id="conteudo5">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>wrap</h3>
+    <div id="conteudo6">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>wrap-reverse</h3>
+    <div id="conteudo7">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>justify-content</h2>
+
+    <h3>flex-start(default)</h3>
+    <div id="conteudo8">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>flex-end</h3>
+    <div id="conteudo9">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>center</h3>
+    <div id="conteudo10">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>space-between</h3>
+    <div id="conteudo11">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>space-around</h3>
+    <div id="conteudo12">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>space-evenly</h3>
+    <div id="conteudo13">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h2>align-items</h2>
+
+    <h3>flex-start(default)</h3>
+    <div id="conteudo14">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>flex-end</h3>
+    <div id="conteudo15">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>center</h3>
+    <div id="conteudo16">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>baseline</h3>
+    <div id="conteudo17">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+    <h3>stretch</h3>
+    <div id="conteudo18">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação</title>
+    <style type="text/css">
+        /*
+            Existe um mundo inteiro de maneiras de criar animações com css, é sinceramente incrivel
+            Explicarei apenas o basico:
+            @keyframes sinaliza que voce está iniciando uma animação
+            
+            Assim como o border-radius, é necessario ultilizarar versões diferentes 
+            para funcionar em navegadores especificos: 
+            @-webkit-keyframes
+            @-moz-keyframes
+            @-o-keyframes
+
+            animation tambem precisa dos prefixios:
+            -webkit-animation
+            -moz-animation
+            -o-animation
+        */
+        @keyframes animacao-caixa{
+            from {
+                background: red;
+                top: 0;
+                left: 0;
+            }
+            to {
+                background: green;
+                top: 200px;
+                left: 200px;
+            }
+        }
+
+        #caixa{
+            width: 300px;
+            height: 300px;
+            background: red;
+            padding: 20px;
+            position: relative;
+            /*animation-name: animacao-caixa;
+            animation-duration: 5s;
+            animation-delay: 3s;
+            animation-iteration-count: 2;/*infinite faz a animaçãos se repedir infinitamente
+            animation-direction: alternate;*/
+            -webkit-animation: animacao-caixa 5s 3s infinite alternate;
+            -moz-animation: animacao-caixa 5s 3s infinite alternate;
+            -o-animation: animacao-caixa 5s 3s infinite alternate;
+            animation: animacao-caixa 5s 3s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa">
+        <h3>Lorem Ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel ullamcorper nulla.</p>
+        <a href="https://www.w3schools.com/css/css3_animations.asp">W3schools</a>
+    </div>
+</body>
+</html>
