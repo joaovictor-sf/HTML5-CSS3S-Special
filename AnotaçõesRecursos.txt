@@ -120,7 +120,7 @@ Novas tags de input
         Cria um botão que deixa voce escolher uma cor
 
 FlexBox
-    Quando voce ultiliza a propriedade flexbox, voce passa a ter um contêiner 
+    Quando voce ultiliza uma flexbox, voce passa a ter um contêiner 
     e dentro dele nós temos Flex items.
     Para ultilizar flexbox, o conteiner terá a propriedade: display:flex.
 
@@ -145,3 +145,46 @@ FlexBox
         wrap: as posições dos itens se ajustam para conseguir caber no conteiner.
         wrap-reverse: inverte as posições em que os itens são posicionados, 
         começando por baixo em vez de começar por cima
+
+    justify-content
+        A propriedade justify-content é usada para alinhar os itens flex
+        Pode ser de 6 maneiras diferentes: flex-start(default) | flex-end | center | space-between | space-around | space-evenly
+
+        flex-start: alinha os itens no início
+        flex-end: alinha os itens no final
+        center: alinha os itens no centro
+        space-between: alinha os itens com espaçamento entre eles
+        space-around: alinha os itens com espaçamento entre eles e nas extremidades
+
+    align-items
+        A propriedade align-items é usada para alinhar os itens flex na vertical
+        Pode ser de 5 maneiras diferentes: flex-start(default) | flex-end | center | baseline | stretch
+
+        flex-start: alinha os itens no início
+        flex-end: alinha os itens no final
+        center: alinha os itens no centro
+        baseline: alinha os itens pela base
+        stretch: estica os itens para ocupar todo o espaço
+
+FlexItens
+    Itens dentro de uma flexbox
+
+    Order 
+        Muda a ordem dos itens 
+        Por default todos os itens tem a ordem 0 
+        A ordem pode ser negativa
+    
+    FlexGrow
+        Define o quanto o item vai crescer em relação aos outros itens
+        Por default todos os itens tem o flex-grow 0
+        Quanto maior o valor, maior o crescimento
+        Exemplo: item2 vai crescer 2x mais que item1
+
+    FlexShrink
+        Define o quanto o item vai diminuir em relação aos outros itens
+        Por default todos os itens tem o flex-shrink 1
+        Quanto maior o valor, maior a diminuição
+
+    FlexBasis
+        Define o tamanho base do item
+        Por default todos os itens tem o flex-basis auto(que é o tamanho normal do item)
