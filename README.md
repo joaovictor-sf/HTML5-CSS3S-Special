@@ -18,3 +18,55 @@ Navegadores mais antigos não suportam o border-radius, então para funcionar é
 
 * <strong>-webkit-</strong> para versões antigas do Chorome e do Safari
 * <strong>-moz-</strong> para versões antigas do Firefox
+
+## Maior controle do tamanho do container
+
+A propriedade “box-sizing” permite definir como o tamanho de um elemento deve ser interpretado em relação ao conteúdo, à borda e ao preenchimento(padding) do elemento.
+
+Existem dois valores principais para a propriedade box-sizing: content-box (valor padrão) e border-box.
+
+A escolha entre content-box e border-box depende da preferência e necessidades do desenvolvedor. O uso de border-box pode ser especialmente útil em layouts responsivos, onde o tamanho total de um elemento precisa ser controlado de maneira mais previsível. Ele permite que você defina o tamanho total do elemento e, em seguida, ajuste o conteúdo, a borda e o preenchimento dentro desse espaço sem que o elemento se expanda além do tamanho desejado.
+
+Assim como no border-radius, é necessário acrescentar versões -webkit- e -moz- para funcionar em todos os navegadores.
+
+## Opacidade
+Para deixar algo transparente é necessário selecionar uma cor com rgb e acrescentar mais um valor, esse valor será a transparência, quanto menor mais transparente.
+
+<strong>0</strong> - invisivel;
+
+<strong>1</strong> - completamente visível;
+
+Exemplo:
+
+    rgb(0, 0, 0, 0.6)
+
+## Degradê
+Existem diversos tipos de degradê, aqui está alguns deles:
+radial-gradient: degradê vindo do meio;
+linear-gradient: degradê vindo dos lados;
+
+Para mais informações olhar <a href="https://www.w3schools.com/colors/colors_gradient.asp">w3schools</a>
+
+    background: radial-gradient(red, blue, green);
+    background: linear-gradient(red, blue);
+    background: linear-gradient(to bottom, #ff0000 0%, #0000ff 100%);
+    background: linear-gradient(to right, #ff0000 0%, #0000ff 100%);
+    background: linear-gradient(to top left, #ff0000 0%, #0000ff 100%);
+    background: linear-gradient(to top right, #ff0000 0%, #0000ff 100%);
+    background: linear-gradient(to top, #ff0000 0%, #0000ff 100%);
+    background: linear-gradient(to left, #ff0000 0%, #0000ff 100%);
+    background: linear-gradient(to bottom left, #ff0000 0%, #0000ff 100%);
+    background: linear-gradient(to bottom right, #ff0000 0%, #0000ff 100%);
+
+## Sombreamento
+Para criar uma sombra, utiliza-se text-shadow(para texto) e box-shadow(para containers).
+
+Eles funcionam da seguinte maneira:
+        
+        text-shadow/box-shadow: horizontal vertical blu(opcional)(fará a sombra fica borrada) cor(é interessante utilizar rgb para deixar a sombra com certa transparência);
+
+No caso do box-shadow,  outra variável que é possível colocar: espaçamento, o quanto a sombra se espalha ou diminui.
+
+    text-shadow: 3px -3px 5px rgb(0, 0, 0, 0.6);
+    box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, 0.6);
+
