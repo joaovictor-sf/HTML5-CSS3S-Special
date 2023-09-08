@@ -70,3 +70,47 @@ No caso do box-shadow,  outra variável que é possível colocar: espaçamento, 
     text-shadow: 3px -3px 5px rgb(0, 0, 0, 0.6);
     box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, 0.6);
 
+## Animação
+Existe um mundo inteiro de maneiras de criar animações com css, é sinceramente incrível
+
+Explicarei apenas o básico:
+    
+    @keyframes sinaliza que você está iniciando uma animação animation chamará a animação e a edita.
+
+Assim como o border-radius, é necessário utilizar versões diferentes para funcionar em navegadores específicos: 
+
+        @-webkit-keyframes
+        @-moz-keyframes
+        @-o-keyframes
+
+animation também precisa dos prefixos:
+
+        -webkit-animation
+        -moz-animation
+        -o-animation
+
+### Tipos de animation
+
+Chama a animação: animation-name: animacao-caixa;
+
+Quanto tempo ela irá durar: animation-duration: 5s;
+
+Quanto tempo até ela começar: animation-delay: 3s;
+
+Quantas vezes ela irá se repetir, infinite faz a animação se repetir infinitamente: animation-iteration-count: 2;
+
+Decide se a animação teve acontecer em reverso: animation-direction: alternate;
+
+Esses tipos podem ser juntados em um só
+animation: animacao-caixa 5s 3s infinite alternate;
+
+## Transições
+A propriedade transition serve para atrasar a transformação de um objeto, criando uma "animação".
+
+Assim como outros exemplos, é necessário versões com -o-, -moz- e -webkit-
+
+Pode ser feito com apenas um componente, atrasando todos os efeitos, ou você pode especificar quanto tempo você quer que cada mudança aconteça.
+
+    transition: 3s;
+    ou
+    transition: width 3s, background 10s;
