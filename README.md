@@ -91,18 +91,28 @@ animation também precisa dos prefixos:
 
 ### Tipos de animation
 
-Chama a animação: animation-name: animacao-caixa;
+Chama a animação: 
+    
+    animation-name: animacao-caixa;
 
 Quanto tempo ela irá durar: animation-duration: 5s;
 
-Quanto tempo até ela começar: animation-delay: 3s;
+Quanto tempo até ela começar: 
 
-Quantas vezes ela irá se repetir, infinite faz a animação se repetir infinitamente: animation-iteration-count: 2;
+    animation-delay: 3s;
 
-Decide se a animação teve acontecer em reverso: animation-direction: alternate;
+Quantas vezes ela irá se repetir, infinite faz a animação se repetir infinitamente: 
+   
+    animation-iteration-count: 2;
+
+Decide se a animação teve acontecer em reverso: 
+
+    animation-direction: alternate;
 
 Esses tipos podem ser juntados em um só
-animation: animacao-caixa 5s 3s infinite alternate;
+animation: 
+
+    animacao-caixa 5s 3s infinite alternate;
 
 ## Transições
 A propriedade transition serve para atrasar a transformação de um objeto, criando uma "animação".
